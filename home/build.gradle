@@ -1,13 +1,11 @@
+
 if (isNeedHomeMoudle.toBoolean()) {
     apply plugin: 'com.android.library'
 } else {
     apply plugin: 'com.android.application'
 }
-
 android {
     compileSdkVersion 29
-
-
     defaultConfig {
         minSdkVersion 21
         targetSdkVersion 29
@@ -15,6 +13,7 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
         if(!isNeedHomeMoudle){
             applicationId "com.ztlj.home"
         }
@@ -24,7 +23,20 @@ android {
                 arguments = [ AROUTER_MODULE_NAME : project.getName() ]
             }
         }
+    }
 
+    sourceSets {
+        main {
+            if (!isNeedHomeMoudle.toBoolean()) {
+                manifest.srcFile 'src/debug/AndroidManifest.xml'
+            } else {
+                manifest.srcFile 'src/main/AndroidManifest.xml'
+                java {
+                    //全部Module一起编译的时候剔除debug目录
+                    exclude '**/debug/**'
+                }
+            }
+        }
     }
 
     buildTypes {
@@ -39,19 +51,6 @@ android {
     compileOptions {
         sourceCompatibility = '1.8'
         targetCompatibility = '1.8'
-    }
-    sourceSets {
-        main {
-            if (!isNeedHomeMoudle.toBoolean()) {
-                manifest.srcFile 'src/debug/AndroidManifest.xml'
-            } else {
-                manifest.srcFile 'src/main/AndroidManifest.xml'
-                java {
-                    //全部Module一起编译的时候剔除debug目录
-                    exclude '**/debug/**'
-                }
-            }
-        }
     }
 
 }
