@@ -6,5 +6,5 @@ package com.ztlj.common.constants;
  * @description:
  */
 public class RouterConstants {
-    public static final String HOME_PATH = "/home";
+    public static final String HOME_PATH = "/home/base";
 }
