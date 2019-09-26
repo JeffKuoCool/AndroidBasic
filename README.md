@@ -24,7 +24,7 @@
 ### 路由
    由于组件之间没有依赖关系，我们的组件之间跳转页面需要通过路由实现。
    这里推荐阿里巴巴开源的 ARouter，具体使用 Wiki 如下
-   [ARouter](https://github.com/alibaba/ARouter)
+   [阿里巴巴ARouter](https://github.com/alibaba/ARouter)
 
 ### TODO
 
