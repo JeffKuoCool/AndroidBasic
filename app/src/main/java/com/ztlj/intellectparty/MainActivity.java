@@ -4,6 +4,7 @@ import android.os.Bundle;
 
 import androidx.databinding.DataBindingUtil;
 
+import com.gyf.immersionbar.ImmersionBar;
 import com.ztlj.common.BaseActivity;
 import com.ztlj.common.constants.RouterConstants;
 import com.ztlj.common.manager.RouterManager;
