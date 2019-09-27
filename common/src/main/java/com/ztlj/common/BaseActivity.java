@@ -5,9 +5,9 @@ import android.os.PersistableBundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
-import com.hwangjr.rxbus.RxBus;
+
+import org.greenrobot.eventbus.EventBus;
 
 /**
  * @date: 2019-09-23
@@ -19,13 +19,26 @@ public class BaseActivity extends AppCompatActivity {
     @Override
     public void onCreate(Bundle savedInstanceState, PersistableBundle persistentState) {
         super.onCreate(savedInstanceState, persistentState);
-//        ARouter.getInstance().inject(this);
-        RxBus.get().register(this);
+        ARouter.getInstance().inject(this);
+
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        if (!EventBus.getDefault().isRegistered(this)) {
+            EventBus.getDefault().register(this);
+        }
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        RxBus.get().unregister(this);
+        EventBus.getDefault().unregister(this);
     }
 }

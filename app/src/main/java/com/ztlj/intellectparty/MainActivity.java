@@ -4,12 +4,14 @@ import android.os.Bundle;
 
 import androidx.databinding.DataBindingUtil;
 
-import com.hwangjr.rxbus.annotation.Subscribe;
 import com.ztlj.common.BaseActivity;
 import com.ztlj.common.constants.RouterConstants;
 import com.ztlj.common.manager.RouterManager;
-import com.ztlj.common.model.RxbusEvent;
 import com.ztlj.intellectparty.databinding.ActivityMainBinding;
+
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
+
 public class MainActivity extends BaseActivity {
 
     private ActivityMainBinding mBinding;
@@ -27,8 +29,8 @@ public class MainActivity extends BaseActivity {
         });
     }
 
-    @Subscribe
-    public void receiveEvent(RxbusEvent rxbusEvent){
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void receiveEvent(Object rxbusEvent){
         mBinding.router.setText("RxbusEvent");
     }
 }
