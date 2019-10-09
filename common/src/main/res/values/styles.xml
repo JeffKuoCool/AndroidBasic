@@ -8,4 +8,89 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="ClubToolbar" parent="Widget.AppCompat.ActionBar">
+        <item name="contentInsetStart">0dp</item>
+        <item name="contentInsetEnd">0dp</item>
+    </style>
+
+    <style name="Text25">
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">25sp</item>
+    </style>
+
+    <style name="Text20">
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="Text18">
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="Text16">
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="Text14">
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="Text12">
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="Text10">
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="Text8">
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">8sp</item>
+    </style>
+
+    <style name="TextWhite25">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">25sp</item>
+    </style>
+
+    <style name="TextWhite20">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="TextWhite18">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="TextWhite16">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="TextWhite14">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="TextWhite12">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="TextWhite10">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="TextWhite8">
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">8sp</item>
+    </style>
+
 </resources>

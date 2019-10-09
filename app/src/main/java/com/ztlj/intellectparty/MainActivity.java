@@ -45,6 +45,7 @@ public class MainActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
+        setSupportActionBar(mBinding.toolbar);
 
         for (int i = 0; i < mTitles.length; i++) {
             mTabEntities.add(new TabEntity(mTitles[i], mIconSelectIds[i], mIconUnselectIds[i]));
@@ -65,7 +66,7 @@ public class MainActivity extends BaseActivity {
 
     private void setEvent() {
         mBinding.router.setOnClickListener(home -> {
-            RouterManager.navigation(RouterConstants.HOME_PATH);
+//            RouterManager.navigation(RouterConstants.HOME_PATH);
         });
     }
 
